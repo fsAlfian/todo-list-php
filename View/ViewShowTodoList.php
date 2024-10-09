@@ -1,9 +1,9 @@
 <?php
-
+require_once '../model/Todolist.php';
 require_once '../BusinessLogic/ShowTodoList.php';
 require_once '../Helper/Input.php';
-require_once '../BusinessLogic/AddTodoList.php';
-require_once '../BusinessLogic/RemoveTodoList.php';
+require_once '../View/ViewAddTodoList.php';
+require_once '../View/ViewRemoveTodoList.php';
 
 function viewShowTodoList() {
     while(true) {
@@ -14,6 +14,7 @@ function viewShowTodoList() {
         echo "3. Exit" . PHP_EOL;
     
         $choice = input("Input your choice");
+
         if ($choice == "1") {
             viewAddTodoList();
         } else if ($choice == "2") {
@@ -24,5 +25,6 @@ function viewShowTodoList() {
         } else {
             echo "Wrong choice" . PHP_EOL;
         }
+
     }
 }
