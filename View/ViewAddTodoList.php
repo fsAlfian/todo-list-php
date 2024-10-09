@@ -7,11 +7,10 @@ require_once '../BusinessLogic/AddTodoList.php';
 
 function viewAddTodoList(){
     echo  'ADD TODO LIST' . PHP_EOL;
-    $todo = input("Input your todo ");
+    $todo = input("Input your todo");
     if ($todo == 'x') {
-        echo 'Cancel' . PHP_EOL;
+        echo 'Cancel add todo' . PHP_EOL;
     } else {
         addTodoList($todo);
     }
-    showTodoList();
 }
